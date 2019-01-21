@@ -1,13 +1,13 @@
 
-# OAuthJS is authentication middleware for Node.js
+# MNC-OAuth is authentication middleware for Node.js
 
 ## Usage example (with koajs)
 ```js
 let Koa = require('koa')
-let aj = require('oauthjs')
+let oa = require('mnc-oauth')
 
 // Github oauth
-let github = aj.GHStrategy({
+let github = oa.GHStrategy({
 	client_id: 'client_id',
 	client_secret: 'client_secret',
 	redirect_uri: 'redirect_uri',

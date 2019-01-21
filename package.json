@@ -1,7 +1,7 @@
 {
-	"name": "log-in",
+	"name": "mnc-oauth",
 	"version": "1.0.0",
-	"description": "LogIn is authentication middleware for Node.js",
+	"description": "MNC-OAuth is authentication middleware for Node.js",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -14,6 +14,6 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/midnightcoder-pro/log-in.git"
+		"url": "https://github.com/midnightcoder-pro/mnc-oauth.git"
 	}
 }
