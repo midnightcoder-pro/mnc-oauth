@@ -1,0 +1,19 @@
+{
+	"name": "AuthJS",
+	"version": "1.0.0",
+	"description": "AuthJS is authentication middleware for Node.js",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Midnightcoder",
+	"dependencies": {
+		"request": "^2.88.0",
+		"request-promise-native": "^1.0.5"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jwerle/sauth.git"
+	},
+}
