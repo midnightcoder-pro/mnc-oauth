@@ -2,7 +2,7 @@
 let rp = require('request-promise-native')
 let qs = require('querystring')
 
-let li = module.exports
+let oa = module.exports
 
 oa.oauth = (uri, form) => rp.post({uri, json: true, form, /*strictSSL: false,*/ headers: {'User-Agent': 'auth'}})
 oa.getUserInfo = uri => rp({uri, json: true, /*strictSSL: false,*/ headers: {'User-Agent': 'auth'}})
