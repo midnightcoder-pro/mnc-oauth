@@ -29,3 +29,37 @@ appServer.use(auth.routes())
 appServer.listen(3000)
 ```
 
+## Available strategies
+VKStrategy - vkontakte
+FBStrategy - facebook
+GHStrategy - github
+GOStrategy - google
+YAStrategy - yandex
+
+## Writing a strategy example
+
+```js
+oa.TestAppStrategy = config => ({
+	link: 'https://oauth.midnightcoder.pro?' + qs.stringify({
+		client_id: config.client_id,
+		redirect_uri: config.redirect_uri,
+		scope: config.scope,
+		response_type: 'code'
+	}),
+	authorize: code =>
+		oa.oauth('https://oauth.testapp.com/token', {
+			code,
+			client_id: config.client_id,
+			client_secret: config.client_secret,
+			redirect_uri: config.redirect_uri
+		})
+		.then(({access_token}) => oa.getUserInfo('https://api.testapp.com/getUserInfo?access_token=' + access_token))
+})
+
+let test = oa.TestAppStrategy({
+	client_id: 'client_id',
+	client_secret: 'client_secret',
+	redirect_uri: 'redirect_uri',
+	scope: 'scope'
+})
+```
