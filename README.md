@@ -1,12 +1,12 @@
 
-# AuthJS is authentication middleware for Node.js
+# OAuthJS is authentication middleware for Node.js
 
 ## Usage example (with koajs)
 ```js
 let Koa = require('koa')
-let aj = require('authjs')
+let aj = require('oauthjs')
 
-// Github auth
+// Github oauth
 let github = aj.GHStrategy({
 	client_id: 'client_id',
 	client_secret: 'client_secret',
