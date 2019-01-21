@@ -31,9 +31,13 @@ appServer.listen(3000)
 
 ## Available strategies
 VKStrategy - vkontakte
+
 FBStrategy - facebook
+
 GHStrategy - github
+
 GOStrategy - google
+
 YAStrategy - yandex
 
 ## Writing a strategy example
