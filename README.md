@@ -65,3 +65,11 @@ let test = oa.TestAppStrategy({
 	scope: 'scope'
 })
 ```
+
+
+[npm-image]: https://badge.fury.io/js/twing-markdown.svg
+[npm-url]: https://npmjs.org/package/twing-markdown
+[travis-image]: https://travis-ci.org/nedkelly/twing-markdown.svg?branch=master
+[travis-url]: https://travis-ci.org/nedkelly/twing-markdown
+[coveralls-image]: https://coveralls.io/repos/github/nedkelly/twing-markdown/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/nedkelly/twing-markdown?branch=master
