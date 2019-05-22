@@ -1,6 +1,6 @@
 
 # MNC-OAuth is authentication middleware for Node.js
-[![NPM version][npm-image]][npm-url]
+[![NPM version][https://badge.fury.io/js/mnc-oauth.svg]][https://www.npmjs.com/package/mnc-oauth]
 
 ## Usage example (with koajs)
 ```js
@@ -66,6 +66,3 @@ let test = oa.TestAppStrategy({
 })
 ```
 
-
-[npm-image]: https://badge.fury.io/js/mnc-oauth.svg
-[npm-url]: https://www.npmjs.com/package/mnc-oauth
