@@ -1,6 +1,6 @@
 
 # MNC-OAuth is authentication middleware for Node.js
-[![npm version][npm-image]][npm-url][![Build status][travis-image]][travis-url][![Test coverage][coveralls-image]][coveralls-url][![Downloads][downloads-image]][downloads-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
 ## Usage example (with koajs)
 ```js
