@@ -66,5 +66,5 @@ let test = oa.TestAppStrategy({
 })
 ```
 
-[npm-image]: https://badge.fury.io/js/twing-markdown.svg
-[npm-url]: https://npmjs.org/package/twing-markdown
+[npm-image]: https://badge.fury.io/js/mnc-oauth.svg
+[npm-url]: https://npmjs.org/package/mnc-oauth
