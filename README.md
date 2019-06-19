@@ -17,11 +17,13 @@ let github = oa.GHStrategy({
 
 let auth = new Router()
 .prefix('/auth')
-.get('/gh', ctx => {
+.get('/github', ctx => {
 	ctx.redirect(github.link)
 })
-.get('/gh/callback', async ctx => {
-	ctx.body = await github.authorize(ctx.query.code).catch(console.log)
+.get('/github/callback', async ctx => {
+	let {access_token} = await github.authorize(ctx.query.code).catch(console.log)
+	let user = await oa.request('https://api.github.com/user?access_token=' + access_token).catch(console.log)
+	console.log(user)
 })
 
 // App server
@@ -41,24 +43,12 @@ appServer.listen(3000)
 ## Writing a strategy example
 
 ```js
-oa.TestAppStrategy = config => ({
-	link: 'https://oauth.midnightcoder.pro?' + qs.stringify({
-		client_id: config.client_id,
-		redirect_uri: config.redirect_uri,
-		scope: config.scope,
-		response_type: 'code'
-	}),
-	authorize: code =>
-		oa.oauth('https://oauth.testapp.com/token', {
-			code,
-			client_id: config.client_id,
-			client_secret: config.client_secret,
-			redirect_uri: config.redirect_uri
-		})
-		.then(({access_token}) => oa.getUserInfo('https://api.testapp.com/getUserInfo?access_token=' + access_token))
+let TestAppStrategy = ({client_id, client_secret, redirect_uri, scope}) => ({
+	link: 'https://oauth.testapp.com?' + qs.stringify({client_id, redirect_uri, scope, response_type: 'code'}),
+	authorize: code => oa.oauth('https://oauth.testapp.com/token', {code, client_id, client_secret, redirect_uri})
 })
 
-let test = oa.TestAppStrategy({
+let test = TestAppStrategy({
 	client_id: 'client_id',
 	client_secret: 'client_secret',
 	redirect_uri: 'redirect_uri',

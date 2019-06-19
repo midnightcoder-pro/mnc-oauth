@@ -1,6 +1,6 @@
 {
 	"name": "mnc-oauth",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "MNC-OAuth is authentication middleware for Node.js",
 	"main": "index.js",
 	"scripts": {
